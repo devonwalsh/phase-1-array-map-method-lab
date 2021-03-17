@@ -12,5 +12,9 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  const splitTitles = tutorials.map(title => title.split(' '))
+  const capitalized = splitTitles.map(array => 
+    array.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+  )
+  return capitalized.map(x => x.join(' '))
 }
